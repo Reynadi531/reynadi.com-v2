@@ -4,6 +4,15 @@ const nextConfig = {
     poweredByHeader: false,
     output: 'standalone',
 
+    images: {
+      remotePatterns: [
+        {
+          protocol: "https",
+          hostname: "assets.reynadi.com"
+        }
+      ]
+    },
+
     headers() {
         return [
           {

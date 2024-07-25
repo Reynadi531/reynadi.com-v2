@@ -9,8 +9,14 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        gray: {
+          light: '#757575',
+          'text-light': '#c1c1c1',
+        },
+      },
       fontFamily: {
-        sans: ['var(--font-nunito)', ...fontFamily.sans],
+        sans: ['var(--font-inter)', ...fontFamily.sans],
       },
     },
   },

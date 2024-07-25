@@ -1,14 +1,15 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+import { cn } from '@/utils/cn';
+
+import { Inter_Font } from './fonts';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Reynadi',
     template: '%s | Reynadi',
+    default: 'Reynadi',
   },
   description: 'Software, DevOps, and Site Reliability Engineer',
   metadataBase: new URL('https://reynadi.com'),
@@ -43,8 +44,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
-      <body className={inter.className}>{children}</body>
+    <html
+      lang='en'
+      className={cn(
+        Inter_Font.variable,
+        'bg-black text-white',
+        'font-sans max-w-screen-md mx-auto p-4 w-full px-6'
+      )}
+    >
+      <body>{children}</body>
     </html>
   );
 }
