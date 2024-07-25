@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbo",
+    "contentlayer-dev": "contentlayer dev",
     "build": "next build",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
     "start": "next start",
@@ -17,11 +18,17 @@
   "dependencies": {
     "@t3-oss/env-nextjs": "^0.11.0",
     "@tabler/icons-react": "^3.7.0",
+    "@tailwindcss/typography": "^0.5.13",
     "clsx": "^2.1.1",
+    "contentlayer": "^0.3.4",
+    "date-fns": "^3.6.0",
     "framer-motion": "^11.2.12",
     "next": "14.2.4",
+    "next-contentlayer": "^0.3.4",
     "react": "^18",
     "react-dom": "^18",
+    "rehype-autolink-headings": "^7.1.0",
+    "remark-gfm": "^4.0.0",
     "sharp": "^0.33.4",
     "tailwind-merge": "^2.3.0",
     "zod": "^3.23.8"
