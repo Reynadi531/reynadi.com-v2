@@ -1,0 +1,2 @@
+name = "reynadi.com-v2"
+compatibility_flags = ["nodejs_compat"]
