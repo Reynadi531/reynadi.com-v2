@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from 'next';
 
 import './globals.css';
@@ -44,15 +45,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang='en'
-      className={cn(
-        Inter_Font.variable,
-        'bg-black text-white',
-        'font-sans max-w-screen-md mx-auto p-4 w-full px-6'
-      )}
-    >
-      <body>{children}</body>
-    </html>
+    <>
+      <Analytics />
+      <html
+        lang='en'
+        className={cn(
+          Inter_Font.variable,
+          'bg-black text-white',
+          'font-sans max-w-screen-md mx-auto p-4 w-full px-6'
+        )}
+      >
+        <body>{children}</body>
+      </html>
+    </>
   );
 }
