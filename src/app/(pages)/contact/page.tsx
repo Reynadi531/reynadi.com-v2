@@ -18,17 +18,15 @@ const ContactPage: NextPage = () => {
           </p>
           <div className='flex flex-col gap-4 pt-4'>
             {IconListJumbotron.map((icon, index) => (
-              <>
-                <Link
-                  className='flex flex-row gap-2 items-center'
-                  key={index}
-                  href={icon.href}
-                  target='_blank'
-                >
-                  <icon.icon className='size-8 hover:text-white/90 transition-colors duration-300 md:text-lg' />
-                  <p className='text-gray-text-light text-lg'>{icon.handle}</p>
-                </Link>
-              </>
+              <Link
+                className='flex flex-row gap-2 items-center'
+                key={index}
+                href={icon.href}
+                target='_blank'
+              >
+                <icon.icon className='size-8 hover:text-white/90 transition-colors duration-300' />
+                <p className='text-gray-text-light text-lg'>{icon.handle}</p>
+              </Link>
             ))}
           </div>
         </div>
