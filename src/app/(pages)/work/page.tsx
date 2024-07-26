@@ -38,7 +38,7 @@ const WorkPage: NextPage = async () => {
       <section className='py-4 flex flex-col gap-6 pb-12'>
         <div className='flex flex-col gap-2'>
           <h1 className='text-lg font-bold'>Latest of my work</h1>
-          <p className='text-base text-gray-text-light'>
+          <p className='text-base text-gray-text-light md:text-lg'>
             The list of what I have been work on throughout the year
           </p>
         </div>

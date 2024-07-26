@@ -91,7 +91,7 @@ const Home: NextPage = async () => {
           )}
         </div>
         <div className='flex items-center justify-center'>
-          <Link href='/works'>
+          <Link href='/work'>
             <p className='text-gray-text-light hover:text-white transition-colors duration-500 text-center underline underline-offset-8 decoration-dashed'>
               see more
             </p>
@@ -107,7 +107,7 @@ const Home: NextPage = async () => {
           <BlankCard message='Currently there is no blog posts :)' />
         </div>
         <div className='flex items-center justify-center pt-4'>
-          <Link href='/blogs'>
+          <Link href='/blog'>
             <p className='text-gray-text-light hover:text-white transition-colors duration-500 text-center underline underline-offset-8 decoration-dashed'>
               see more
             </p>
