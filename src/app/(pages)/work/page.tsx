@@ -25,6 +25,7 @@ async function getWorkPost() {
       shortDescription: work.shortDescription,
       slug: work.slug,
       thumbnail: work.thumbnail,
+      externalLink: work.externalLink,
     }));
 
   return sortedWork;
