@@ -6,6 +6,7 @@ import Link from 'next/link';
 import BlankCard from '@/components/Card/BlankCard';
 import WorkCard from '@/components/Card/WorkCard';
 import { Navbar } from '@/components/Sections';
+import Footer from '@/components/Sections/Footer';
 
 import { IconListJumbotron } from '@/constants';
 
@@ -47,10 +48,10 @@ const Home: NextPage = async () => {
               <h1 className='font-bold text-[22px] md:text-4xl'>
                 Hi, I'm Reynadi👋
               </h1>
-              <div className='flex flex-row gap-1 md:gap-4 text-gray-light'>
+              <div className='flex flex-row gap-1 md:gap-4 text-gray-text-light'>
                 {IconListJumbotron.map((icon, index) => (
                   <Link key={index} href={icon.href} target='_blank'>
-                    <icon.icon className='size-6 hover:text-white/75 transition-colors duration-300 md:size-7' />
+                    <icon.icon className='size-6 hover:text-white/90 transition-colors duration-300 md:size-7' />
                   </Link>
                 ))}
               </div>
@@ -81,9 +82,13 @@ const Home: NextPage = async () => {
           My latest and featured work
         </p>
         <div className='flex flex-col w-full h-auto gap-6'>
-          {workList.map((work, index) => (
-            <WorkCard key={index} {...work} thumbnail={work.thumbnail} />
-          ))}
+          {workList ? (
+            workList.map((work, index) => (
+              <WorkCard key={index} {...work} thumbnail={work.thumbnail} />
+            ))
+          ) : (
+            <BlankCard message='Currently there is no works :)' />
+          )}
         </div>
         <div className='flex items-center justify-center'>
           <Link href='/works'>
@@ -123,7 +128,7 @@ const Home: NextPage = async () => {
           </Link>
         </div>
       </section>
-      {/* TODO: FOOTERR */}
+      <Footer />
     </>
   );
 };
