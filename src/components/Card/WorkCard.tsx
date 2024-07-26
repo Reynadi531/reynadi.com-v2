@@ -20,7 +20,7 @@ const WorkCard: React.FunctionComponent<IProps> = ({
 }: IProps) => {
   return (
     <>
-      <Link href={slug.startsWith('/') ? `/works${slug}` : `/works/${slug}`}>
+      <Link href={slug.startsWith('/') ? `/work${slug}` : `/work/${slug}`}>
         <div className='flex flex-col h-auto border-[1px] border-gray-text-light rounded-2xl hover:opacity-80 transition-all duration-300'>
           <div className='relative flex flex-auto w-full h-3/4'>
             <Image
