@@ -3,6 +3,7 @@ import { NextPage } from 'next';
 import { useRouter } from 'next/navigation';
 
 import { Navbar } from '@/components/Sections';
+import Footer from '@/components/Sections/Footer';
 
 const NotFoundPage: NextPage = () => {
   const router = useRouter();
@@ -22,6 +23,7 @@ const NotFoundPage: NextPage = () => {
           </button>
         </div>
       </section>
+      <Footer />
     </>
   );
 };
