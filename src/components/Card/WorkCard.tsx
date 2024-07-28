@@ -6,6 +6,8 @@ import * as React from 'react';
 type IProps = {
   title: string;
   position: string;
+  startDate: string;
+  endDate?: string;
   shortDescription: string;
   slug: string;
   thumbnail: string;
@@ -19,6 +21,8 @@ const WorkCard: React.FunctionComponent<IProps> = ({
   slug,
   thumbnail,
   externalLink,
+  endDate,
+  startDate,
 }: IProps) => {
   return (
     <>
@@ -44,8 +48,21 @@ const WorkCard: React.FunctionComponent<IProps> = ({
           <div className='flex flex-auto flex-row w-full max-h-1/4 px-4 gap-1 py-4'>
             <div className='flex-1'>
               <h3 className='font-semibold text-base md:text-lg'>{title}</h3>
-              <p className='foont-normal text-sm md:text-base'>{position}</p>
-              <p className='mt-2 font-normal text-sm text-gray-text-light md:text-base'>
+              <p className='font-normal text-sm md:text-base'>{position}</p>
+              <p className='font-normal text-sm md:text-base mt-1 text-gray-text-light '>{`${new Date(
+                startDate
+              ).toLocaleDateString('en', {
+                month: 'short',
+                year: 'numeric',
+              })} - ${
+                endDate
+                  ? new Date(endDate).toLocaleDateString('en', {
+                      month: 'short',
+                      year: 'numeric',
+                    })
+                  : 'Present'
+              }`}</p>
+              <p className='mt-2 font-normal text-sm md:text-base text-white'>
                 {shortDescription}
               </p>
             </div>

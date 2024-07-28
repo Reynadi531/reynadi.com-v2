@@ -29,6 +29,8 @@ async function getWorkPost() {
       title: work.title,
       position: work.position,
       shortDescription: work.shortDescription,
+      startDate: work.startDate,
+      endDate: work.endDate,
       slug: work.slug,
       thumbnail: work.thumbnail,
       externalLink: work.externalLink,
@@ -84,9 +86,7 @@ const Home: NextPage = async () => {
         </p>
         <div className='flex flex-col w-full h-auto gap-6'>
           {workList ? (
-            workList.map((work, index) => (
-              <WorkCard key={index} {...work} thumbnail={work.thumbnail} />
-            ))
+            workList.map((work, index) => <WorkCard key={index} {...work} />)
           ) : (
             <BlankCard message='Currently there is no works :)' />
           )}
