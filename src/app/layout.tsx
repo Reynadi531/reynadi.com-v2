@@ -24,12 +24,6 @@ export const metadata: Metadata = {
     url: 'https://reynadi.com',
     title: 'Reynadi',
     description: 'Software, DevOps, and Site Reliability Engineer',
-    images: [
-      {
-        url: 'https://cdn.statically.io/og/theme=dark/Reynadi.jpg',
-        alt: 'Reynadi',
-      },
-    ],
     siteName: 'Reynadi',
   },
   twitter: {
