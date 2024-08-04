@@ -1,37 +1,39 @@
 import { withContentlayer } from 'next-contentlayer';
+import sharp from 'sharp';
+
+sharp.simd(false);
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    reactStrictMode: true,
-    poweredByHeader: false,
-    output: 'standalone',
+  reactStrictMode: true,
+  poweredByHeader: false,
+  output: 'standalone',
 
-    images: {
-      remotePatterns: [
-        {
-          protocol: "https",
-          hostname: "assets.reynadi.com"
-        }
-      ]
-    },
-
-    headers() {
-        return [
-          {
-            source: '/(.*)',
-            headers: securityHeaders,
-          },
-        ];
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'assets.reynadi.com',
       },
+    ],
+  },
 
-    eslint: {
-        ignoreDuringBuilds: true,
-    },
-    typescript: {
-        ignoreBuildErrors: true, 
-    }
+  headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: securityHeaders,
+      },
+    ];
+  },
+
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 };
-
 
 const ContentSecurityPolicy = `
     default-src 'self';

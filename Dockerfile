@@ -12,13 +12,13 @@ RUN \
     fi
 
 FROM --platform=linux/amd64 node:20-alpine AS builder
-ARG DATABASE_URL
-ARG NEXT_PUBLIC_CLIENTVAR
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 ENV NEXT_TELEMETRY_DISABLED=1
+ENV VIPS_NOVECTOR=0
+
 
 RUN \
     if [ -f yarn.lock ]; then SKIP_ENV_VALIDATION=1 yarn build; \
@@ -33,6 +33,7 @@ WORKDIR /app
 ENV NODE_ENV=production
 
 ENV NEXT_TELEMETRY_DISABLED=1
+ENV VIPS_NOVECTOR=0
 
 COPY --from=builder /app/next.config.mjs ./
 COPY --from=builder /app/public ./public
