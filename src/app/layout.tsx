@@ -1,5 +1,5 @@
-import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from 'next';
+import Script from 'next/script';
 
 import './globals.css';
 
@@ -40,7 +40,6 @@ export default function RootLayout({
 }>) {
   return (
     <>
-      <Analytics />
       <html
         lang='en'
         className={cn(
@@ -50,6 +49,12 @@ export default function RootLayout({
         )}
       >
         <body>{children}</body>
+        <Script
+          defer
+          src='https://analytics.reynadi.com/script.js'
+          strategy='beforeInteractive'
+          data-website-id='161288d3-c258-4064-8e33-97a87b56248a'
+        />
       </html>
     </>
   );
