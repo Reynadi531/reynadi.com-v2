@@ -12,6 +12,15 @@ export const metadata: Metadata = {
     template: '%s | Reynadi',
     default: 'Reynadi',
   },
+  keywords: [
+    'Reynadi',
+    'Software Engineer',
+    'DevOps',
+    'Site Reliability Engineer',
+    'Reynadi Andreas Priesley',
+    'Reynadi AP',
+    'Reynadi Andreas P',
+  ],
   description: 'Software, DevOps, and Site Reliability Engineer',
   metadataBase: new URL('https://reynadi.com'),
   alternates: {
