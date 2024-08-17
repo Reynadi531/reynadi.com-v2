@@ -63,6 +63,7 @@ export default function RootLayout({
           src='https://analytics.reynadi.com/script.js'
           strategy='beforeInteractive'
           data-website-id='161288d3-c258-4064-8e33-97a87b56248a'
+          data-domains='reynadi.com'
         />
       </html>
     </>
