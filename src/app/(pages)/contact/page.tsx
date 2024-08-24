@@ -1,10 +1,14 @@
-import { NextPage } from 'next';
+import { Metadata, NextPage } from 'next';
 import Link from 'next/link';
 
 import { Navbar } from '@/components/Sections';
 import Footer from '@/components/Sections/Footer';
 
 import { IconListJumbotron } from '@/constants';
+
+export const metadata: Metadata = {
+  title: 'Contact',
+};
 
 const ContactPage: NextPage = () => {
   return (

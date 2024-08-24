@@ -1,8 +1,13 @@
+import { Metadata } from 'next';
 import React from 'react';
 
 import BlankCard from '@/components/Card/BlankCard';
 import { Navbar } from '@/components/Sections';
 import Footer from '@/components/Sections/Footer';
+
+export const metadata: Metadata = {
+  title: 'Blog',
+};
 
 const BlogPage = () => {
   return (
