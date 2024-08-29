@@ -18,7 +18,7 @@ const ContactPage: NextPage = () => {
         <div className='flex flex-col gap-2'>
           <h1 className='text-lg font-bold'>Contact</h1>
           <p className='text-base text-gray-text-light md:text-lg'>
-            You can contact me throguh email or through my social media handle
+            You can contact me through email or through my social media handle
           </p>
           <div className='flex flex-col gap-4 pt-4'>
             {IconListJumbotron.map((icon, index) => (
