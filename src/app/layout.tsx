@@ -60,9 +60,9 @@ export default function RootLayout({
         <head>
           <Script
             defer
-            src='https://analytics.reynadi.com/script.js'
+            src='https://umami.reynadi.com/script.js'
             strategy='beforeInteractive'
-            data-website-id='161288d3-c258-4064-8e33-97a87b56248a'
+            data-website-id='fb9718de-9295-461f-b236-0b5c78942851'
             data-domains='reynadi.com'
           />
         </head>
