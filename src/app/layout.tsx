@@ -59,11 +59,9 @@ export default function RootLayout({
       >
         <head>
           <Script
+            src='https://app.rybbit.io/api/script.js'
+            data-site-id='977'
             defer
-            src='https://umami.reynadi.com/script.js'
-            strategy='beforeInteractive'
-            data-website-id='fb9718de-9295-461f-b236-0b5c78942851'
-            data-domains='reynadi.com'
           />
         </head>
         <body>{children}</body>
