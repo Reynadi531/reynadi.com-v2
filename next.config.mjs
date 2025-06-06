@@ -37,7 +37,7 @@ const nextConfig = {
 
 const ContentSecurityPolicy = `
     default-src 'self';
-    script-src 'self' 'unsafe-eval' 'unsafe-inline' umami.reynadi.com;
+    script-src 'self' 'unsafe-eval' 'unsafe-inline' app.rybbit.io;
     style-src 'self' 'unsafe-inline';
     img-src * blob: data:;
     media-src 'none';
