@@ -57,14 +57,14 @@ export default function RootLayout({
           'font-sans max-w-screen-md mx-auto p-4 w-full px-6'
         )}
       >
-        <head>
+        <body>
+          {children}
           <Script
             src='https://app.rybbit.io/api/script.js'
             data-site-id='977'
-            defer
+            strategy='afterInteractive'
           />
-        </head>
-        <body>{children}</body>
+        </body>
       </html>
     </>
   );

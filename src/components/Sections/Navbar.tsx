@@ -9,10 +9,10 @@ export const Navbar: React.FC = () => {
   const pathname = usePathname();
   return (
     <>
-      <nav className='w-ful'>
+      <nav className='w-full'>
         <ul className='justify-center flex flex-1 flex-row gap-6 py-2'>
-          {NavbarMenuList.map((menu, index) => (
-            <Link key={index} href={menu.slug}>
+          {NavbarMenuList.map((menu) => (
+            <Link key={menu.slug} href={menu.slug}>
               <li
                 className={clsx(
                   'px-2 py-1 text-gray-light font-medium md:text-lg ',

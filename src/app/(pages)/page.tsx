@@ -52,8 +52,8 @@ const Home: NextPage = async () => {
                 Hi, I'm Reynadi👋
               </h1>
               <div className='flex flex-row gap-1 md:gap-4 text-gray-text-light'>
-                {IconListJumbotron.map((icon, index) => (
-                  <Link key={index} href={icon.href} target='_blank'>
+                {IconListJumbotron.map((icon) => (
+                  <Link key={icon.name} href={icon.href} target='_blank'>
                     <icon.icon className='size-6 hover:text-white/90 transition-colors duration-300 md:size-7' />
                   </Link>
                 ))}
@@ -85,8 +85,8 @@ const Home: NextPage = async () => {
           My latest and featured work
         </p>
         <div className='flex flex-col w-full h-auto gap-6'>
-          {workList ? (
-            workList.map((work, index) => <WorkCard key={index} {...work} />)
+          {workList.length > 0 ? (
+            workList.map((work) => <WorkCard key={work.slug} {...work} />)
           ) : (
             <BlankCard message='Currently there is no works :)' />
           )}

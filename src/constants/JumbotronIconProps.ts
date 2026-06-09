@@ -31,7 +31,7 @@ export const IconListJumbotron: IListIcon[] = [
     icon: IconBrandX,
   },
   {
-    name: 'Insatgram',
+    name: 'Instagram',
     handle: '@reynadiap',
     href: 'https://www.instagram.com/reynadiap',
     icon: IconBrandInstagram,

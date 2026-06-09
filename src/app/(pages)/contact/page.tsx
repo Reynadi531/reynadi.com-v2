@@ -21,10 +21,10 @@ const ContactPage: NextPage = () => {
             You can contact me through email or through my social media handle
           </p>
           <div className='flex flex-col gap-4 pt-4'>
-            {IconListJumbotron.map((icon, index) => (
+            {IconListJumbotron.map((icon) => (
               <Link
                 className='flex flex-row gap-2 items-center'
-                key={index}
+                key={icon.name}
                 href={icon.href}
                 target='_blank'
               >

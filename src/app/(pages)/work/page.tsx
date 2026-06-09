@@ -45,9 +45,9 @@ const WorkPage: NextPage = async () => {
             The list of what I have been work on throughout the year
           </p>
         </div>
-        {workList ? (
-          workList.map((work, index) => (
-            <WorkCard key={index} {...work} thumbnail={work.thumbnail} />
+        {workList.length > 0 ? (
+          workList.map((work) => (
+            <WorkCard key={work.slug} {...work} thumbnail={work.thumbnail} />
           ))
         ) : (
           <BlankCard message='Currently there is no works :)' />

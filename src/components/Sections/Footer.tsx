@@ -9,8 +9,8 @@ const Footer: React.FunctionComponent = () => {
       <div className='w-full border-t-[1px] border-gray-text-light flex flex-col'>
         <nav className='w-full my-4'>
           <ul className='flex flex-row justify-center gap-8'>
-            {NavbarMenuList.map((menu, index) => (
-              <Link key={index} href={menu.slug}>
+            {NavbarMenuList.map((menu) => (
+              <Link key={menu.slug} href={menu.slug}>
                 <li className='text-gray-text-light font-medium md:text-lg hover:text-white transition-colors duration-500'>
                   {menu.name}
                 </li>
@@ -20,9 +20,9 @@ const Footer: React.FunctionComponent = () => {
         </nav>
         <div className='w-full flex flex-col'>
           <div className='flex flex-row justify-center gap-2'>
-            {IconListJumbotron.map((icon, index) => (
-              <Link key={index} href={icon.href} target='_blank'>
-                <icon.icon className='size-6 text-gray-text-light hover:text-whitetransition-colors duration-300 md:size-7' />
+            {IconListJumbotron.map((icon) => (
+              <Link key={icon.name} href={icon.href} target='_blank'>
+                <icon.icon className='size-6 text-gray-text-light hover:text-white transition-colors duration-300 md:size-7' />
               </Link>
             ))}
           </div>
